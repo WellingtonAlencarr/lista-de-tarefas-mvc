@@ -9,7 +9,7 @@ namespace Lista_de_Tarefas.Controllers
 {
     public class UsersController : Controller
     {
-       public string uriBase = "http://well.somee.com/Usuarios/";
+       public string uriBase = "http://well.somee.com/ListaTarefas/Usuarios/";
        //xyz tem que ser substituido pelo endereço da sua API.
 
 

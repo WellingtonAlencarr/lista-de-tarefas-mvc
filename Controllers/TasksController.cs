@@ -10,7 +10,7 @@ namespace Lista_de_Tarefas.Controllers
 {
     public class TasksController : Controller
     {
-        public string uriBase = "http://well.somee.com/Tasks";
+        public string uriBase = "http://well.somee.com/ListaTarefas/Tasks/";
 
         [HttpGet]
         public async Task<ActionResult> IndexAsync()
