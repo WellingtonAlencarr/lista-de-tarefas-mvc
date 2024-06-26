@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("lista-tarefas-MVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+074e308ad62c88b20f0ab8ae71ddf67961ee11c8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7193079ae30a7b982f6f2d09e24fec76674814cb")]
 [assembly: System.Reflection.AssemblyProductAttribute("lista-tarefas-MVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("lista-tarefas-MVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
