@@ -1,0 +1,70 @@
+@model Lista_de_Tarefas.Models.TaskModel
+@{
+    ViewBag.Title = "Novo Tarefa";
+}
+@if (@TempData["Mensagem"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Mensagem"]</div>
+}
+<!--Configuração para exibir mensagem de erro -->
+@if (@TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["MensagemErro"]</div>
+}
+<!--Insira aqui os TempData de Sucesso e Erro para evitar tela da morte -->
+<h2>Criar um nova tarefa</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <hr />
+
+        <div class="form-group">
+            Nome da tarefa
+            <div
+                class="col-md-6">
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } }) </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" }) 
+            <div
+                class="col-md-6">
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } }) </div>
+        </div>
+
+        <div class="form-group">
+            Data da tarefa 
+            <div
+                class="col-md-6">
+                @Html.EditorFor(model => model.CreateDate, new { htmlAttributes = new { @class = "form-control" } }) </div>
+        </div>
+
+        <div class="form-group">
+            Data de expiração
+             <div
+                class="col-md-6">
+                @Html.EditorFor(model => model.ExpirationDate, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.DropDownListFor(model => model.CreateDate, Html.GetEnumSelectList(typeof(Lista_de_Tarefas.Models.Enums.StatusTask)),
+                         "---Selecione---", new { @class = "form-control" })
+            </div>
+            
+        </div>
+        <br/>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-6">
+                <input type="submit" value="Salvar" class="btn btn-primary">
+                 @Html.ActionLink("Retornar", "Index", "Tarefas", null, new { @class = "btn btn-warning" })
+            </div>
+        </div>
+    </div>
+}
